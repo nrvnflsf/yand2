@@ -21,7 +21,7 @@ class MyWidget(QMainWindow):
             qp = QPainter()
             qp.begin(self)
             for i in range(randint(5, 15)):
-                qp.setBrush(QColor('yellow'))
+                qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
                 n = randint(5, 300)
                 qp.drawEllipse(randint(1, 1200), randint(1, 800), n, n)
             qp.end()
@@ -32,4 +32,4 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyWidget()
     ex.show()
-    sys.exit(app.exec_())  ##154623543
+    sys.exit(app.exec_())
